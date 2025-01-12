@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="https://wanaby.online/site.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+          rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <title>Pixel Numbers</title>
+</head>
+<body>
+<div class="top">
+    <h1 style="margin:0;margin-bottom:10px;font-size:40px;letter-spacing:8px;">Pixel Numbers</h1>
+    <div style="margin-bottom:10px;display:flex;justify-content:center;" id="ton-connect"></div>
+</div>
+<div class="middle">
+    <h2 style="font-size:36px;color:#6586ff;margin:0;text-align:left;letter-spacing:3px;">History</h2>
+    <div class="referals">
+        <div style="margin-bottom:20px;max-height: 300px; overflow-y: scroll;">
+            <table class="order-data">
+                <thead>
+                <tr>
+                    <th style="background:#1fbfd5;">Datetime</th>
+                    <th style="background:#d8751d;">Amount</th>
+                    <th style="background:#398a39;">Status</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="referal-container" style="display: flex; justify-content: space-between; align-items: center;">
+        <a class="back-button-container" href="../referals">
+            <button class="back-button">Back</button>
+        </a>
+    </div>
+</div>
+<script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="../assets/js/telegram.js"></script>
+<script src="../assets/js/eventHandlers.js"></script>
+<script src="../assets/js/connect.js"></script>
+<script src="../assets/js/getReferalsHistory.js"></script>
+</body>
+</html>

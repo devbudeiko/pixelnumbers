@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="https://wanaby.online/site.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <title>Pixel Numbers</title>
+</head>
+<body>
+<div class="top">
+    <h1>Pixel Numbers</h1>
+    <div style="display:flex;justify-content:center;" id="ton-connect"></div>
+</div>
+<div class="middle">
+    <div class="player-names" style="margin-bottom:20px;display:flex;align-items:center;width:100%;justify-content:space-between;">
+        <div class="player" id="player1">
+            <h2 id="player-username-1"></h2>
+        </div>
+        <div class="player" id="player2">
+            <h2></h2>
+        </div>
+    </div>
+    <div class="number-display" id="numberDisplay">0</div>
+</div>
+<div id="winModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <h2>Congratulations! You win! 🤑</h2>
+        <p style="color: #36e736;font-size:24px;">You earned 0.5 TON</p>
+        <button id="js-win-close-button" class="close-button">Exit Game</button>
+    </div>
+</div>
+<div id="loseModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <h2>Sorry, you lost 😔</h2>
+        <p style="color:#f34180;font-size:24px;">Better luck next time...<br>Try again!</p>
+        <button id="js-lose-close-button" class="close-button">Exit Game</button>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="../assets/js/telegram.js"></script>
+<script src="../assets/js/connect.js"></script>
+<script src="../assets/js/game-05.js"></script>
+</body>
+</html>

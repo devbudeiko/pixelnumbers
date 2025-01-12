@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="https://wanaby.online/site.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+          rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <title>Pixel Numbers | Deposit</title>
+</head>
+<body>
+<div class="top">
+    <h1 style="margin:0;margin-bottom:10px;font-size:40px;letter-spacing:8px;">Pixel Numbers</h1>
+    <div style="margin-bottom:10px;display:flex;justify-content:center;" id="ton-connect"></div>
+</div>
+<div class="toast-message" id="toast">Address copied to clipboard.</div>
+<div class="middle">
+    <h2 style="font-size:36px;color:#6586ff;margin:0;text-align:left;letter-spacing:3px;">Deposit</h2>
+    <p style="color:#d8751d;letter-spacing:2px;
+    font-size:20px;margin:0;margin-top:10px;margin-bottom:15px;
+    text-align:left;width:100%;">
+        <span class="js-address" style="color:#1fbfd5;">UQAroWX5p2FGdNsRShZOwKZyJJ6RWLwn4<br>
+            KZAP4fUr1RKDNY8
+        </span><span class="js-copy-address" style="color:#6586ff;">(Click to copy)</span>
+    </p>
+    <p style="color:#d8751d;letter-spacing:2px;
+    font-size:20px;margin:0;margin-bottom:15px;
+    text-align:left;width:100%;">
+        Send TON to this address and
+        come back here to check your transactions.</p>
+    <p style="color:#d8751d;letter-spacing:2px;
+    font-size:20px;margin:0;margin-bottom:15px;
+    text-align:left;width:100%;">
+        <b style="color:red;">Attention!</b> Send funds only from the wallet that you have connected in this
+        application, otherwise your funds will not be counted.
+    </p>
+    <div class="referal-container" style="display: flex;justify-content:space-between;align-items: center;">
+        <a class="back-button-container" href="../balance">
+            <button class="back-button">Back</button>
+        </a>
+    </div>
+</div>
+<div id="preloader">
+    <div id="preloaderNumber">Checking<br>
+        transactions...</div>
+</div>
+<script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="../assets/js/telegram.js"></script>
+<script src="../assets/js/eventHandlers.js"></script>
+<script src="../assets/js/connect.js"></script>
+<script src="../assets/js/check-deposit.js"></script>
+</body>
+</html>

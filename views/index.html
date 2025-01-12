@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="https://wanaby.online/site.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+          rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <title>Pixel Numbers</title>
+</head>
+<body>
+<div style="background-color:#242424;z-index:10;" class="top">
+</div>
+<div class="middle">
+    <h1 style="color:#566cbc;margin:0;margin-bottom:5px;letter-spacing:8px;z-index:10;">Pixel Numbers</h1>
+    <span style="letter-spacing:1px;font-size:26px;display:block;margin-bottom:15px;">To continue, you need to <br>
+        connect your wallet</span>
+    <div style="display:flex;justify-content:center;" id="ton-connect"></div>
+</div>
+<div style="background-color:#242424;letter-spacing:1px;
+color:#393939;z-index:10;" class="bottom">
+    <footer>
+        By using the application, you are aware that you are doing everything consciously. We do not promise or
+        guarantee an increase in income.
+    </footer>
+</div>
+<div id="idProblemModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <h2>ID Problem</h2>
+        <p style="color:#f34180;font-size:24px;">responseBody.message</p>
+        <button id="js-id-close-button" class="close-button">Close</button>
+    </div>
+</div>
+<div id="addressProblemModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <h2>Address Problem</h2>
+        <p style="color:#f34180;font-size:24px;">responseBody.message</p>
+        <button id="js-wallet-close-button" class="close-button">Close</button>
+    </div>
+</div>
+<script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="../assets/js/telegram.js"></script>
+<script src="../assets/js/eventHandlers.js"></script>
+<script src="../assets/js/welcome.js"></script>
+</body>
+</html>

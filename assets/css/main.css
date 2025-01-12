@@ -1,0 +1,441 @@
+body {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    background-color: #566cbc;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+html {
+    touch-action: pan-x pan-y;
+}
+
+body {
+    overscroll-behavior: contain;
+}
+
+.top, .middle, .bottom {
+    padding: 20px;
+}
+
+.top {
+    background-color: rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.middle {
+    background-color: #242424;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.bottom {
+    flex: 0 0 auto;
+}
+
+.player {
+    border-radius: 10px;
+    padding: 10px;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.player h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-family: "Jersey 10", sans-serif;
+}
+
+.current-turn {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.number-display {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px;
+    padding: 80px;
+    width: 50px;
+    border-radius: 100%;
+    background: linear-gradient(145deg, #6b81e1, #4e5db7);
+    box-shadow: 8px 8px 86px #485a8d, -8px -8px 86px #6e7dd2;
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.number-display:active {
+    transform: scale(0.95);
+    box-shadow: 4px 4px 8px #485a8d, -4px -4px 8px #6e7dd2;
+}
+
+footer {
+    font-size: 14px;
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: absolute; /* Абсолютное позиционирование */
+    z-index: 1000; /* Поверх остальных элементов */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Прокрутка при необходимости */
+    background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный фон */
+}
+
+/* Стили для содержимого модального окна */
+.modal-content {
+    background-color: #242424;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff; /* Белый текст для контраста */
+    position: absolute; /* Абсолютное позиционирование внутри модального окна */
+    top: 50%; /* Смещение сверху на 50% */
+    left: 50%; /* Смещение слева на 50% */
+    transform: translate(-50%, -50%); /* Смещение назад на 50% ширины и высоты */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Тень для лучшего визуального эффекта */
+}
+
+
+
+#modalText {
+    letter-spacing: 2px;
+    font-size: 26px;
+}
+
+.play-again-button {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #d21010;
+    color: white;
+    padding: 10px 20px;
+    font-size: 22px;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.close-button {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #606060;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.active-player {
+    background-color: #566cbc;
+    box-shadow: #663399 0px 7px 29px 0px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.select-game {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.select-game li {
+    margin: 0;
+}
+
+.select-game a {
+    padding: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+#pixel-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.pixel {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #00ff00;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#preloaderNumber {
+    letter-spacing: 3px;
+    font-size: 40px;
+    color: #fff;
+    font-family: "Jersey 10", sans-serif;
+}
+
+.referals {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+th {
+    background-color: #4c72a8;
+    font-weight: bold;
+}
+
+.referal-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+#referal-link {
+    width: 100%;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color:#1fbfd5;
+}
+
+.referals {
+    width: 100%;
+}
+
+.copy-button, .send-offer-game-pay, .back-button, .send-offer-ref-pay,
+.history-button, .deposit-button {
+    font-family: "Jersey 10", sans-serif;
+    width: 100%;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #6586ff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+}
+
+.send-offer-game-pay {
+    background-color: #398a39;
+}
+
+.back-button {
+    background-color: #606060;
+}
+
+.back-button-container {
+    width: 100%;
+}
+
+.deposit-button {
+    background: #0fadb6;
+}
+
+.history-button {
+    background: #d8751d;
+}
+
+.disabled {
+    background: #393939;
+}
+
+.block {
+    display:block;
+}
+
+input.password-input {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.toast-message {
+    visibility: hidden;
+    width: 85%;
+    background: #398a39;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1000;
+    letter-spacing: 3px;
+    top: 157px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.toast-message.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.half-width-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.half-width-container button,
+.half-width-container a {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.player-names h2 {
+    letter-spacing: 2px;
+    font-family: "Handjet", sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+.counter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.deposit-input {
+    width: 90%;
+    text-align: center;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #566cbc;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0 10px;
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.2), inset -5px -5px 15px rgba(255, 255, 255, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+button.decrease-btn,
+button.increase-btn {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #884ae2;
+    color: white;
+    padding: 10px 20px;
+    font-size: 32px;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.decrease-btn:hover,
+button.increase-btn:hover {
+    background-color: #8c5fd0;
+}

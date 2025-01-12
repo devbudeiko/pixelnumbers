@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="https://wanaby.online/site.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+          rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <title>Pixel Numbers</title>
+</head>
+<body>
+<div class="toast-message" id="toast">Link copied to clipboard.</div>
+<div class="top">
+    <h1 style="margin:0;margin-bottom:10px;font-size:40px;letter-spacing:8px;">Pixel Numbers</h1>
+    <div style="margin-bottom:10px;display:flex;justify-content:center;" id="ton-connect"></div>
+</div>
+<div class="middle">
+    <h2 style="font-size:36px;color:#6586ff;margin:0;text-align:left;letter-spacing:3px;">Referals</h2>
+    <div class="referals">
+        <table>
+            <thead>
+            <tr>
+                <th>1 LV</th>
+                <th>2 LV</th>
+                <th>3 LV</th>
+                <th>Earned</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="js-no-withdrawal-ref-msg" style="font-size:20px;letter-spacing:2px;
+    color:#d8751d;margin-bottom:5px;
+    text-align:left;display: none;">
+        The Withdraw button will be active when the Earned field is at least 0.1 TON
+    </div>
+    <div class="referal-container">
+        <div class="half-width-container">
+            <button class="js-send-offer-game-pay send-offer-game-pay disabled" disabled>Withdraw</button>
+            <a class="back-button-container" href="/referals/history">
+                <button class="history-button">History</button>
+            </a>
+        </div>
+        <button class="copy-button">Copy referal link</button>
+        <a class="back-button-container" href="../home">
+            <button class="back-button">Back</button>
+        </a>
+    </div>
+</div>
+<div id="success-withdrawal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <h2>Done</h2>
+        <p style="color:#398a39;font-size:24px;letter-spacing:2px;">Your withdrawal request has been successfully created.
+            The funds will be credited to your wallet within 24 hours.</p>
+        <button id="js-success-close-button" class="close-button">Close</button>
+    </div>
+</div>
+<script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="../assets/js/telegram.js"></script>
+<script src="../assets/js/eventHandlers.js"></script>
+<script src="../assets/js/connect.js"></script>
+<script src="../assets/js/referals.js"></script>
+<script src="../assets/js/send-order-pay-ref.js"></script>
+</body>
+</html>

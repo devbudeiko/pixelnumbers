@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="https://wanaby.online/site.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+          rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <title>Pixel Numbers | Deposit</title>
+</head>
+<body>
+<div class="top">
+    <h1 style="margin:0;margin-bottom:10px;font-size:40px;letter-spacing:8px;">Pixel Numbers</h1>
+</div>
+<div class="middle">
+    <div style="margin-bottom:10px;display:flex;justify-content:center;" id="ton-connect"></div>
+    <h2 style="font-size:36px;color:#6586ff;margin:0;text-align:left;letter-spacing:3px;">Deposit</h2>
+    <div class="counter-container">
+        <button class="decrease-btn" style="font-size: 20px;">-</button>
+        <input type="text" class="deposit-input js-deposit-value" value="0.001" placeholder="Enter amount" maxlength="5" readonly style="text-align: center; margin: 0 10px;">
+        <button class="increase-btn" style="font-size: 20px;">+</button>
+    </div>
+    <p style="color:#d8751d;letter-spacing:2px;font-size:20px;margin:0;margin-bottom:15px;text-align:left;">
+        Choose an amount to deposit. The minimum amount is 0.5 TON
+    </p>
+    <div class="referal-container" style="display: flex;justify-content:space-between;align-items: center;">
+        <button class="js-send-transaction-deposit send-offer-game-pay disabled" disabled>Deposit</button>
+        <a class="back-button-container" href="../balance">
+            <button class="back-button">Back</button>
+        </a>
+    </div>
+</div>
+<div id="success-deposit" class="modal" style="display:none;">
+    <div class="modal-content">
+        <h2 style="letter-spacing:3px;">Done</h2>
+        <p style="color:#398a39;font-size:24px;letter-spacing:2px;">The transaction has been
+            submitted for verification.
+            If the transaction is successful, the funds will be credited to your
+            balance within 1 minute.
+        </p>
+        <button id="js-success-close-button" class="close-button">Close</button>
+    </div>
+</div>
+<div id="error-deposit" class="modal" style="display:none;">
+    <div class="modal-content">
+        <h2 style="letter-spacing:3px;">Transaction Error</h2>
+        <p style="color:#d8751d;font-size:24px;letter-spacing:2px;">An error occurred while
+            sending the transaction.
+            Please try again.</p>
+        <button id="js-error-close-button" class="close-button">Close</button>
+    </div>
+</div>
+<script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="../assets/js/telegram.js"></script>
+<script src="../assets/js/eventHandlers.js"></script>
+<script src="../assets/js/connect.js"></script>
+<script src="../assets/js/check-deposit.js"></script>
+</body>
+</html>

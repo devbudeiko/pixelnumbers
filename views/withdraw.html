@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" href="https://wanaby.online/site.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+          rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <title>Pixel Numbers | Balance</title>
+</head>
+<body>
+<div class="top">
+    <h1 style="margin:0;margin-bottom:10px;font-size:40px;letter-spacing:8px;">Pixel Numbers</h1>
+    <div style="margin-bottom:10px;display:flex;justify-content:center;" id="ton-connect"></div>
+</div>
+<div class="middle">
+    <h2 style="font-size:36px;color:#6586ff;margin:0;text-align:left;letter-spacing:3px;">Balance</h2>
+    <h3 style="color:#398a39;font-size:26px;letter-spacing:2px;" class="js-ton-for-pay"></h3>
+    <span class="js-no-withdrawal-game-pay-msg block" style="font-size:20px;text-align:left;
+    letter-spacing:2px;
+    margin-bottom:25px;color:#d8751d;">The <b>Withdraw</b> button will be active when you
+        have available funds for withdrawal.</span>
+    <div class="referal-container" style="display: flex;justify-content:space-between;align-items: center;">
+        <div class="half-width-container">
+            <button class="js-send-offer-ref-pay send-offer-ref-pay disabled" disabled>Withdraw</button>
+            <a class="back-button-container" href="/balance/deposit">
+                <button class="deposit-button">Deposit</button>
+            </a>
+        </div>
+        <a class="back-button-container" href="/balance/history">
+            <button class="history-button">History</button>
+        </a>
+    <a class="back-button-container" href="../home">
+        <button class="back-button">Back</button>
+    </a>
+    </div>
+</div>
+<div id="success-withdrawal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <h2>Done</h2>
+        <p style="color:#398a39;font-size:24px;">Your withdrawal request has been successfully created.
+            The funds will be credited to your wallet within 24 hours.</p>
+        <button id="js-success-close-button" class="close-button">Close</button>
+    </div>
+</div>
+<script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="../assets/js/telegram.js"></script>
+<script src="../assets/js/eventHandlers.js"></script>
+<script src="../assets/js/connect.js"></script>
+<script src="../assets/js/withdraw.js"></script>
+<script src="../assets/js/send-order-pay-games.js"></script>
+</body>
+</html>

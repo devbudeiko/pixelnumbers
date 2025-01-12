@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@orbs-network/ton-access": "^2.3.3",
+    "@tma.js/init-data-node": "^1.4.0",
+    "axios": "^1.7.7",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.2.0",
+    "csurf": "^1.10.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "graphql-request": "^7.1.0",
+    "joi": "^17.13.3",
+    "mysql": "^2.18.1",
+    "node-telegram-bot-api": "^0.63.0",
+    "pm2": "^5.4.2",
+    "tonweb": "^0.0.66"
+  }
+}
